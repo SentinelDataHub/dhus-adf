@@ -5,7 +5,7 @@
 
     <artifactId>dhus-plugin-sral</artifactId>
     <groupId>eu.serco.dhus.plugins</groupId>
-    <version>0.0.2-osf</version>
+    <version>0.0.2-1</version>
     
 
     <name>DHuS - Plugin Sentinel-3 SRAL</name>
@@ -26,7 +26,7 @@
         <dependency>
             <artifactId>dhus-services</artifactId>
 		    <groupId>eu.serco.dhus.services</groupId>
-		    <version>0.0.2-osf</version>
+		    <version>0.0.2-1</version>
         </dependency>
         
         <dependency>
@@ -69,27 +69,42 @@
         </resources>
     </build>
     
+    
+   
    <repositories>
       <repository>
-         <id>external dependencies</id>
-<!-- repository https://copernicus.serco.eu/repository/nexus/content/repositories/releases
-     used to proxy gael's resources requires credentials
-     Using alternative source repository. -->
-         <url>https://repository.gael.fr/nexus/content/groups/public</url>
+         <id>osf-releases</id>
+         <name>OSF Main Repository</name>
+         <url>
+           https://copernicus.serco.eu/repository/nexus/content/repositories/releases/
+         </url>
+      </repository>
+      <repository>
+         <id>osf-public</id>
+         <name>OSF Public Repository</name>
+         <url>
+            https://copernicus.serco.eu/repository/nexus/content/groups/public/
+         </url>
+         <layout>default</layout>
       </repository>
    </repositories>
 
    <distributionManagement>
       <repository>
          <uniqueVersion>true</uniqueVersion>
-         <id>osf-delivery</id>
+         <id>osf-releases</id>
          <name>OSF Releases Repository</name>
          <url>
-            https://copernicus.serco.eu/repository/nexus/content/repositories/OSF_releases
+            https://copernicus.serco.eu/repository/nexus/content/repositories/releases/
+
          </url>
          <layout>default</layout>
       </repository>
-   </distributionManagement>
+      <site>
+         <id>gael-site</id>
+         <url>${site.baseUrl}/</url>
+      </site>
+   </distributionManagement> 
 
    <issueManagement>
       <system>Jira</system>
@@ -97,10 +112,11 @@
    </issueManagement>
 
    <scm>
-      <connection>scm:git:https://github.com/SentinelDataHub/dhus-adf</connection>
-      <developerConnection>scm:git:https://github.com/SentinelDataHub/dhus-adf</developerConnection>
+      <connection>scm:git:https://github.com/SercoSPA/DHuS</connection>
+      <developerConnection>scm:git:https://github.com/SercoSPA/DHuS</developerConnection>
       <tag>HEAD</tag>
-      <url>https://github.com/SentinelDataHub/dhus-adf</url>
+      <url>https://github.com/SercoSPA/DHuS</url>
    </scm>
+
 
 </project>

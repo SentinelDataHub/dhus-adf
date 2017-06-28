@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     
     <properties>
-      <dhus.core>1.0.1-6</dhus.core>
+      <dhus.core>1.0.1-8-osf</dhus.core>
       <tomcat.port>8080</tomcat.port>
    	</properties>
     <artifactId>dhus-services</artifactId>
     <groupId>eu.serco.dhus.services</groupId>
-    <version>0.0.2-1</version>
+    <version>0.0.2-1-osf</version>
     
     <name>DHuS - Services</name>
     
@@ -62,10 +62,10 @@
 
    <repositories>
       <repository>
-         <id>osf-releases</id>
+         <id>osf-delivery</id>
          <name>OSF Main Repository</name>
          <url>
-           https://copernicus.serco.eu/repository/nexus/content/repositories/releases/
+           https://copernicus.serco.eu/repository/nexus/content/repositories/OSF_releases/
          </url>
       </repository>
       <repository>
@@ -76,23 +76,16 @@
          </url>
          <layout>default</layout>
       </repository>
-	  <repository>
-         <uniqueVersion>true</uniqueVersion>
-         <id>osf-delivery</id>
-         <name>OSF Releases Repository</name>
-         <url>https://copernicus.serco.eu/repository/nexus/content/repositories/OSF_releases/</url>
-         <layout>default</layout>
-      </repository>
 	   
    </repositories>
 
    <distributionManagement>
       <repository>
-         <uniqueVersion>true</uniqueVersion>
-         <id>osf-releases</id>
+        <!-- <uniqueVersion>true</uniqueVersion>-->
+         <id>osf-delivery</id>
          <name>OSF Releases Repository</name>
          <url>
-            https://copernicus.serco.eu/repository/nexus/content/repositories/releases/
+            https://copernicus.serco.eu/repository/nexus/content/repositories/OSF_releases/
 
          </url>
          <layout>default</layout>

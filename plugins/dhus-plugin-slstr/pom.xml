@@ -4,7 +4,7 @@
     <name>DHuS - Plugin Sentinel-3 SLSTR</name>
     <groupId>eu.serco.dhus.plugins</groupId>
     <artifactId>dhus-plugin-slstr</artifactId>
-    <version>0.0.2-1</version>
+    <version>0.0.2-1-osf</version>
     <packaging>jar</packaging>
     
     <properties>
@@ -67,10 +67,10 @@
     
      <repositories>
       <repository>
-         <id>osf-releases</id>
+         <id>osf-delivery</id>
          <name>OSF Main Repository</name>
          <url>
-           https://copernicus.serco.eu/repository/nexus/content/repositories/releases/
+           https://copernicus.serco.eu/repository/nexus/content/repositories/OSF_releases/
          </url>
       </repository>
       <repository>
@@ -86,10 +86,10 @@
    <distributionManagement>
       <repository>
          <uniqueVersion>true</uniqueVersion>
-         <id>osf-releases</id>
+         <id>osf-delivery</id>
          <name>OSF Releases Repository</name>
          <url>
-            https://copernicus.serco.eu/repository/nexus/content/repositories/releases/
+            https://copernicus.serco.eu/repository/nexus/content/repositories/OSF_releases/
 
          </url>
          <layout>default</layout>

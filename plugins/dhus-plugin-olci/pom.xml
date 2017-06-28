@@ -5,7 +5,7 @@
 
     <artifactId>dhus-plugin-olci</artifactId>
     <groupId>eu.serco.dhus.plugins</groupId>
-    <version>0.0.2-1</version>
+    <version>0.0.2-1-osf</version>
     
 
     <name>DHuS - Plugin Sentinel-3 OLCI</name>
@@ -73,10 +73,10 @@
    
    <repositories>
       <repository>
-         <id>osf-releases</id>
+         <id>osf-delivery</id>
          <name>OSF Main Repository</name>
          <url>
-           https://copernicus.serco.eu/repository/nexus/content/repositories/releases/
+           https://copernicus.serco.eu/repository/nexus/content/repositories/OSF_releases
          </url>
       </repository>
       <repository>
@@ -92,10 +92,10 @@
    <distributionManagement>
       <repository>
          <uniqueVersion>true</uniqueVersion>
-         <id>osf-releases</id>
+         <id>osf-delivery</id>
          <name>OSF Releases Repository</name>
          <url>
-            https://copernicus.serco.eu/repository/nexus/content/repositories/releases/
+            https://copernicus.serco.eu/repository/nexus/content/repositories/OSF_releases/
 
          </url>
          <layout>default</layout>

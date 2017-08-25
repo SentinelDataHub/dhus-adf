@@ -5,7 +5,7 @@
 
     <artifactId>dhus-plugin-sral</artifactId>
     <groupId>eu.serco.dhus.plugins</groupId>
-    <version>0.0.2-1-osf</version>
+    <version>0.0.3-osf</version>
     
 
     <name>DHuS - Plugin Sentinel-3 SRAL</name>
@@ -26,7 +26,7 @@
         <dependency>
             <artifactId>dhus-services</artifactId>
 		    <groupId>eu.serco.dhus.services</groupId>
-		    <version>0.0.2-1</version>
+		    <version>0.0.3-osf</version>
         </dependency>
         
         <dependency>
@@ -112,10 +112,10 @@
    </issueManagement>
 
    <scm>
-      <connection>scm:git:https://github.com/SercoSPA/DHuS</connection>
-      <developerConnection>scm:git:https://github.com/SercoSPA/DHuS</developerConnection>
+      <connection>scm:git:https://github.com/SentinelDataHub/dhus-adf</connection>
+      <developerConnection>scm:git:https://github.com/SentinelDataHub/dhus-adf</developerConnection>
       <tag>HEAD</tag>
-      <url>https://github.com/SercoSPA/DHuS</url>
+      <url>https://github.com/SentinelDataHub/dhus-adf</url>
    </scm>
 
 

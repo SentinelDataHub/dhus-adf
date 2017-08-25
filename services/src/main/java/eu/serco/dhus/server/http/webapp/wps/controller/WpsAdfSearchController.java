@@ -43,7 +43,9 @@ import eu.serco.dhus.processor.ProcessorService;
 @Controller
 public class WpsAdfSearchController {
 	private static Logger logger = LogManager.getLogger();
-	 
+	
+	private static String DOWNLOAD_EXT=".zip";
+	
 	@PreAuthorize("hasRole('ROLE_SEARCH')")
 	@RequestMapping(value = "/auxiliaries", method = { RequestMethod.GET })
 	public ResponseEntity<?> getAuxiliaries(@RequestParam(value="type", defaultValue="") String type, @RequestParam(value="filename", defaultValue="")String filename) {
@@ -68,11 +70,12 @@ public class WpsAdfSearchController {
 	}
 	
 	@RequestMapping(value = "/auxiliaries/download", method = { RequestMethod.GET })
-	public ResponseEntity<?> downloadAuxiliaries(@RequestParam(value="uuid", defaultValue="") String uuid, @RequestParam(value="filename", defaultValue="")String filename) {
+	public ResponseEntity<?> downloadAuxiliaries(@RequestParam(value="uuid", defaultValue="") String uuid, @RequestParam(value="filename", defaultValue="file")String filename) {
 
 		try {
 			String hashedString=ConfigurationManager.getHashedConnectionString();
-			
+			//SD-1928 add download filename archive extension
+			String downloadFilename = (filename.endsWith(DOWNLOAD_EXT)) ? (filename) : filename + DOWNLOAD_EXT;
 						
 	    	String urlString = ConfigurationManager.getExternalDHuSHost()+"odata/v1/Products('"+uuid+"')/$value";
 	    	logger.info("urlString:::: " + urlString);
@@ -83,7 +86,7 @@ public class WpsAdfSearchController {
 	    	InputStreamResource isr = new InputStreamResource(is);
 	    	HttpHeaders httpHeaders = new HttpHeaders();
 	    	httpHeaders.add("Authorization", "Basic " + hashedString);		    	
-	    	httpHeaders.add("Content-disposition", "attachment; filename="+filename);
+	    	httpHeaders.add("Content-disposition", "attachment; filename="+downloadFilename);
 	    	httpHeaders.setContentType(MediaType.APPLICATION_OCTET_STREAM);	    	
 	    	    
 	    	return new ResponseEntity<>(isr, httpHeaders,

@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     
     <properties>
-      <dhus.core>1.0.1-8-osf</dhus.core>
+      <dhus.core>1.0.1-12-osf</dhus.core>
       <tomcat.port>8080</tomcat.port>
    	</properties>
     <artifactId>dhus-services</artifactId>
     <groupId>eu.serco.dhus.services</groupId>
-    <version>0.0.2-1-osf</version>
+    <version>0.0.3-osf</version>
     
     <name>DHuS - Services</name>
     
@@ -102,10 +102,10 @@
    </issueManagement>
 
    <scm>
-      <connection>scm:git:https://github.com/SercoSPA/DHuS</connection>
-      <developerConnection>scm:git:https://github.com/SercoSPA/DHuS</developerConnection>
+      <connection>scm:git:https://github.com/SentinelDataHub/dhus-adf</connection>
+      <developerConnection>scm:git:https://github.com/SentinelDataHub/dhus-adf</developerConnection>
       <tag>HEAD</tag>
-      <url>https://github.com/SercoSPA/DHuS</url>
+      <url>https://github.com/SentinelDataHub/dhus-adf</url>
    </scm>
 
 

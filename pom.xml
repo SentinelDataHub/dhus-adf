@@ -6,7 +6,7 @@
 
    <groupId>org.dhus</groupId>
    <artifactId>dhus-adf-suite</artifactId>
-   <version>0.0.2-1-osf</version>
+   <version>0.0.3-osf</version>
    <packaging>pom</packaging>
 
    <name>DHuS ADF - Suite</name>
@@ -50,10 +50,10 @@
    </issueManagement>
 
    <scm>
-      <connection>scm:git:https://github.com/SercoSPA/dhus-adf</connection>
-      <developerConnection>scm:git:https://github.com/SercoSPA/dhus-adf</developerConnection>
+      <connection>scm:git:https://github.com/SentinelDataHub/dhus-adf</connection>
+      <developerConnection>scm:git:https://github.com/SentinelDataHub/dhus-adf</developerConnection>
       <tag>HEAD</tag>
-      <url>https://github.com/SercoSPA/dhus-adf</url>
+      <url>https://github.com/SentinelDataHub/dhus-adf</url>
    </scm>
 
 
